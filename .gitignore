@@ -10,4 +10,4 @@ cacehe*
 .env.local
 .env.prod
 
-idea/
+/.idea/
