@@ -28,13 +28,13 @@ def add_message(message, role):
     prev_messages["Messages"].append(resp_val)
     write_json(prev_messages, "history")
 
-def send_prompt(message):
+def send_prompt(message, prompt="You are a helpful assistant"):
     prev_messages = load_json()
 
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": f"Youre a helpful assistant" },
+            {"role": "system", "content": prompt},
             {
                 "role": "user",
                 "content": message
