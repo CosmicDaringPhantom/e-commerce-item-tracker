@@ -1,0 +1,13 @@
+venv*
+/venv*
+env
+/env*
+
+__pycache__*
+cacehe*
+
+.env
+.env.local
+.env.prod
+
+idea/
