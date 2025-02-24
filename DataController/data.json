@@ -1,3 +1,40 @@
 {
-    "Data": []
+    "Data": [
+        {
+            "Product": "Asus rog",
+            "Website": "example.com",
+            "Dates": [
+                "2025-02-20",
+                "2025-02-21"
+            ],
+            "Prices": [
+                "1200.99",
+                "1150.49"
+            ]
+        },
+        {
+            "Product": "Smartphone",
+            "Website": "shoponline.com",
+            "Dates": [
+                "2025-02-18",
+                "2025-02-19"
+            ],
+            "Prices": [
+                "899.99",
+                "879.50"
+            ]
+        },
+        {
+            "Product": "Tablet",
+            "Website": "techstore.com",
+            "Dates": [
+                "2025-02-15",
+                "2025-02-16"
+            ],
+            "Prices": [
+                "499.99",
+                "479.99"
+            ]
+        }
+    ]
 }

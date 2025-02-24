@@ -97,6 +97,18 @@ def update_date_price(product_name, new_date, new_price):
         return True
     return False
 
+def edit_product_name(product_name, new_name):
+    products = load_json()
+    found = find_product(product_name, products)
+    index = found["index"]
+
+    if found["status"]:
+        products["Data"][index]["Product"] = new_name
+        write_json(products, "data")
+        return True
+    return False
+
+
 def delete_product(product_name):
     products = load_json()
     found = find_product(product_name, products)
@@ -107,3 +119,5 @@ def delete_product(product_name):
         write_json(products, "data")
         return True
     return False
+
+edit_product_name("Laptop", "Asus rog")
