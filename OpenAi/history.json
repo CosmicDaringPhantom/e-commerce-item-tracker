@@ -1,0 +1,28 @@
+{
+    "Messages": [
+        {
+            "role": "user",
+            "content": "test"
+        },
+        {
+            "role": "system",
+            "content": "It looks like you're testing! How can I assist you today?"
+        },
+        {
+            "role": "user",
+            "content": "test"
+        },
+        {
+            "role": "system",
+            "content": "Test received! How can I assist you today?"
+        },
+        {
+            "role": "user",
+            "content": "can you tell me what the last message i sent"
+        },
+        {
+            "role": "system",
+            "content": "The last message you sent was: \"test.\""
+        }
+    ]
+}

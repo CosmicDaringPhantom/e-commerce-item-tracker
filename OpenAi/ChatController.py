@@ -22,14 +22,19 @@ def get_messages():
 
     return prev_messages["Messages"]
 
-def send_prompt(message):
+def add_message(message, role):
+    prev_messages = load_json()
+    resp_val = {"role": role, "content": message}
+    prev_messages["Messages"].append(resp_val)
+    write_json(prev_messages, "history")
 
+def send_prompt(message):
     prev_messages = load_json()
 
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "system", "content": f"Youre a helpful assistant" },
             {
                 "role": "user",
                 "content": message
@@ -50,13 +55,15 @@ def send_prompt(message):
 def new_chat():
     write_json({"Messages": []}, "history")
 
+def prev_message():
+    prev_messages = load_json()
+    last_three = prev_messages[-3:]
+    pre_prompt(last_three)
 
-def pre_prompting(prompt):
-
+def pre_prompt(prompt):
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{"role": "system", "content": prompt}
         ]
     )
-
     return completion.choices[0].message.content
